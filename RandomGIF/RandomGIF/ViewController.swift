@@ -64,7 +64,7 @@ class ViewController: UIViewController {
         // - whose title color is red
         // - title has a font size of 20
         // - has 5 pixel rounded corners
-        // - when tapped on:
+        // - when tapped on, call the newGIFButtonPressed function which will:
         //    - changes the background color of this button to red
         //    - fetches a new GIF from Giphy API
         //    - updates the text of the titleLabel to be the title of the gif
@@ -78,12 +78,15 @@ class ViewController: UIViewController {
         newGIFButton.addTarget(self, action: #selector(newGIFButtonPressed), for: .touchUpInside)
         view.addSubview(newGIFButton)
 
+        // - Make the button's center x position equal to the center x of the view
+        // - Make the button's top edge be 50 pixels below the image view's bottom edge
         NSLayoutConstraint.activate([
             newGIFButton.centerXAnchor.constraint(equalTo: view.centerXAnchor),
             newGIFButton.topAnchor.constraint(equalTo: gifImageView.bottomAnchor, constant: 50)
             ])
     }
 
+    /// The function that is going to be called when we tap on the button
     @objc func newGIFButtonPressed() {
         // Set the newGIFButton background color back to red
         newGIFButton.backgroundColor = .red
