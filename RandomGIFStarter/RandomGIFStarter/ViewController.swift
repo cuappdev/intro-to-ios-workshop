@@ -45,6 +45,8 @@ class ViewController: UIViewController {
             ])
 
 
+
+
         //////////////////////////////////////////////////////////////////////////////////////////
         /// Setup the label
 
@@ -59,6 +61,12 @@ class ViewController: UIViewController {
 
         // - Make the label's center x position equal to the center x of the view
         // - Make the label's bottom edge be 30 pixels above the image view's top edge
+        //        NSLayoutConstraint.activate([
+        //            titleLabel.centerXAnchor.constraint(equalTo: view.centerXAnchor),
+        //            titleLabel.bottomAnchor.constraint(equalTo: gifImageView.topAnchor, constant: -30)
+        //            ])
+
+
 
 
         //////////////////////////////////////////////////////////////////////////////////////////
@@ -79,10 +87,15 @@ class ViewController: UIViewController {
 
         // - Make the button's center x position equal to the center x of the view
         // - Make the button's top edge be 50 pixels below the image view's bottom edge
+//        NSLayoutConstraint.activate([
+//            newGIFButton.centerXAnchor.constraint(equalTo: view.centerXAnchor),
+//            newGIFButton.topAnchor.constraint(equalTo: gifImageView.bottomAnchor, constant: 50)
+//            ])
     }
 
 //    /// The function that is going to be called when we tap on the button
 //    @objc func newGIFButtonPressed() {
+//        print("Hello")
 //        // Set the newGIFButton background color back to red
 //        newGIFButton.backgroundColor = .red
 //        getRandomGIF()
