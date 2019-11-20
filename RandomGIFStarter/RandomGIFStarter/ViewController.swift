@@ -20,19 +20,21 @@ class ViewController: UIViewController {
 
         setupViews()
 
-//        /// UNCOMMENT THIS
 //        getRandomGIF()
     }
 
     // MARK: - Initialize and layout views
     func setupViews() {
-        // Setup UIImageView which will be used to display the GIF
+
+        // 1. Setup UIImageView which will be used to display the GIF
         gifImageView = UIImageView()
         gifImageView.translatesAutoresizingMaskIntoConstraints = false
         gifImageView.contentMode = .scaleAspectFit
+        // Set image to be image of a dog
         // Add it as a subview to the view so that it shows up on our application
         view.addSubview(gifImageView)
 
+        // Constraints for the UIImageView
         // - Make the image view's center x position equal to the center x of the view
         // - Make the image view's center y position equal to the center y of the view
         // - Make the image view have a width of 300 pixels
@@ -42,15 +44,13 @@ class ViewController: UIViewController {
             gifImageView.centerYAnchor.constraint(equalTo: view.centerYAnchor),
             gifImageView.widthAnchor.constraint(equalToConstant: 300),
             gifImageView.heightAnchor.constraint(equalToConstant: 300)
-            ])
-
-
-
+        ])
 
         //////////////////////////////////////////////////////////////////////////////////////////
         /// Setup the label
 
-        // Setup a label:
+        // 2. Setup the label
+        // - whose title is "Label!"
         // - has centered text
         // - has blue background color
         // - has white text color
@@ -58,7 +58,7 @@ class ViewController: UIViewController {
         // - has 5 pixel rounded corners
         // Add it as a subview to the view so that it shows up on our application
 
-
+        // Constraints for the label
         // - Make the label's center x position equal to the center x of the view
         // - Make the label's bottom edge be 30 pixels above the image view's top edge
         //        NSLayoutConstraint.activate([
@@ -68,11 +68,10 @@ class ViewController: UIViewController {
 
 
 
-
         //////////////////////////////////////////////////////////////////////////////////////////
         /// Setup the button
 
-        // Setup a button:
+        // 3. Setup the bottom
         // - whose title is "Get new GIF!"
         // - has red background color
         // - whose title color is red

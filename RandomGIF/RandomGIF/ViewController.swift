@@ -36,7 +36,7 @@ class ViewController: UIViewController {
             gifImageView.centerYAnchor.constraint(equalTo: view.centerYAnchor),
             gifImageView.widthAnchor.constraint(equalToConstant: 300),
             gifImageView.heightAnchor.constraint(equalToConstant: 300)
-            ])
+        ])
 
         // Setup a label:
         // - has centered text
@@ -51,12 +51,16 @@ class ViewController: UIViewController {
         titleLabel.textColor = .white
         titleLabel.font = UIFont.systemFont(ofSize: 20)
         titleLabel.layer.cornerRadius = 5
+        titleLabel.numberOfLines = 0
+        titleLabel.lineBreakMode = .byWordWrapping
         view.addSubview(titleLabel)
 
         NSLayoutConstraint.activate([
             titleLabel.centerXAnchor.constraint(equalTo: view.centerXAnchor),
-            titleLabel.bottomAnchor.constraint(equalTo: gifImageView.topAnchor, constant: -30)
-            ])
+            titleLabel.bottomAnchor.constraint(equalTo: gifImageView.topAnchor, constant: -30),
+            titleLabel.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 10),
+            titleLabel.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -10)
+        ])
 
         // Setup a button:
         // - whose title is "Get new GIF!"
@@ -83,7 +87,7 @@ class ViewController: UIViewController {
         NSLayoutConstraint.activate([
             newGIFButton.centerXAnchor.constraint(equalTo: view.centerXAnchor),
             newGIFButton.topAnchor.constraint(equalTo: gifImageView.bottomAnchor, constant: 50)
-            ])
+        ])
     }
 
     /// The function that is going to be called when we tap on the button
