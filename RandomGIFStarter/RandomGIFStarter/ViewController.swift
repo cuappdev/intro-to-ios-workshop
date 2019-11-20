@@ -56,15 +56,20 @@ class ViewController: UIViewController {
         // - has white text color
         // - font size of text is 20
         // - has 5 pixel rounded corners
+        // - allows text to span more than one line
+        // - breaks the text by words to start a new line
         // Add it as a subview to the view so that it shows up on our application
 
         // Constraints for the label
         // - Make the label's center x position equal to the center x of the view
         // - Make the label's bottom edge be 30 pixels above the image view's top edge
-        //        NSLayoutConstraint.activate([
-        //            titleLabel.centerXAnchor.constraint(equalTo: view.centerXAnchor),
-        //            titleLabel.bottomAnchor.constraint(equalTo: gifImageView.topAnchor, constant: -30)
-        //            ])
+        // - Make the label's left and right edge be 10 pixels from the edges of the screen
+//        NSLayoutConstraint.activate([
+//            titleLabel.centerXAnchor.constraint(equalTo: view.centerXAnchor),
+//            titleLabel.bottomAnchor.constraint(equalTo: gifImageView.topAnchor, constant: -30)
+//            titleLabel.leftAnchor.constraint(equalTo: view.leftAnchor, constant: 10),
+//            titleLabel.rightAnchor.constraint(equalTo: view.rightAnchor, constant: -10)
+//        ])
 
 
 
@@ -74,7 +79,7 @@ class ViewController: UIViewController {
         // 3. Setup the bottom
         // - whose title is "Get new GIF!"
         // - has red background color
-        // - whose title color is red
+        // - whose title color is black
         // - title has a font size of 20
         // - has 5 pixel rounded corners
         // - when tapped on, call the newGIFButtonPressed function which will:
